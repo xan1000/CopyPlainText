@@ -2,7 +2,7 @@
     "name": "copyplaintext",
     "displayName": "CopyPlainText",
     "description": "Copy plain text with no formatting.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "p26frqxxfmwrzekd6c6fcty5kipjkr3gaeejzpkyy42p5udjkjyq",
     "engines": {
         "vscode": "^1.23.0"
