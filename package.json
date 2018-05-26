@@ -15,12 +15,26 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
+        "commands": [{
+            "command": "extension.copyPlainText",
+            "title": "Copy Plain Text"
+        }],
+        "menus": {
+            "commandPalette": [{
                 "command": "extension.copyPlainText",
-                "title": "Copy Plain Text"
-            }
-        ]
+                "when": "editorHasSelection"
+            }],
+            "editor/context": [{
+                "when": "editorHasSelection",
+                "command": "extension.copyPlainText",
+                "group": "9_cutcopypaste@2"
+            }]
+        },
+        "keybindings": [{
+            "command": "extension.copyPlainText",
+            "key": "ctrl+alt+c",
+            "when": "editorHasSelection"
+        }]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

@@ -4,4 +4,8 @@ Copying text from VS Code includes the formatting which is nice until you paste 
 
 ## Features
 
-Adds a single simple command palette called "Copy Plain Text" which will copy the currently selected text to the clipboard with no formatting.
+Adds the following:
+
+* Keyboard shortcut "ctrl+alt+c" which will copy the currently selected text to the clipboard with no formatting.
+* Editor context menu item when text is selected called "Copy Plain Text".
+* Command palette when text is selected also called "Copy Plain Text".
