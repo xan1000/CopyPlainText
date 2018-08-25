@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "publisher": "p26frqxxfmwrzekd6c6fcty5kipjkr3gaeejzpkyy42p5udjkjyq",
     "engines": {
-        "vscode": "^1.23.0"
+        "vscode": "^1.26.1"
     },
     "categories": [
         "Other"
@@ -15,26 +15,34 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.copyPlainText",
-            "title": "Copy Plain Text"
-        }],
+        "commands": [
+            {
+                "command": "extension.copyPlainText",
+                "title": "Copy Plain Text"
+            }
+        ],
         "menus": {
-            "commandPalette": [{
-                "command": "extension.copyPlainText",
-                "when": "editorHasSelection"
-            }],
-            "editor/context": [{
-                "when": "editorHasSelection",
-                "command": "extension.copyPlainText",
-                "group": "9_cutcopypaste@2"
-            }]
+            "commandPalette": [
+                {
+                    "command": "extension.copyPlainText",
+                    "when": "editorHasSelection"
+                }
+            ],
+            "editor/context": [
+                {
+                    "when": "editorHasSelection",
+                    "command": "extension.copyPlainText",
+                    "group": "9_cutcopypaste@2"
+                }
+            ]
         },
-        "keybindings": [{
-            "command": "extension.copyPlainText",
-            "key": "ctrl+alt+c",
-            "when": "editorHasSelection"
-        }]
+        "keybindings": [
+            {
+                "command": "extension.copyPlainText",
+                "key": "ctrl+alt+c",
+                "when": "editorHasSelection"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -44,11 +52,11 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "tslint": "^5.8.0",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/mocha": "^5.2.5",
+        "@types/node": "^10.9.1",
+        "tslint": "^5.11.0",
+        "typescript": "^3.0.1",
+        "vscode": "^1.1.21"
     },
     "dependencies": {
         "copy-paste": "^1.3.0"
