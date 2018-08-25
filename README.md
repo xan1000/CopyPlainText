@@ -9,3 +9,11 @@ Adds the following:
 * Keyboard shortcut "ctrl+alt+c" which will copy the currently selected text to the clipboard with no formatting.
 * Editor context menu item when text is selected called "Copy Plain Text".
 * Command palette when text is selected also called "Copy Plain Text".
+
+## Note to Linux users on Debian distros
+
+The ncp node-copy-paste https://github.com/xavi-/node-copy-paste package used to copy text to the clipboard requires **xclip** installed on Debian distros. To install use:
+
+```
+sudo apt install xclip
+```
