@@ -2,10 +2,12 @@
     "name": "copyplaintext",
     "displayName": "CopyPlainText",
     "description": "Copy plain text with no formatting.",
-    "version": "1.0.4",
+    "icon": "icon.png",
+    "version": "1.0.5",
+    "license": "Apache-2.0",
     "publisher": "p26frqxxfmwrzekd6c6fcty5kipjkr3gaeejzpkyy42p5udjkjyq",
     "engines": {
-        "vscode": "^1.39.2"
+        "vscode": "^1.40.2"
     },
     "categories": [
         "Other"
@@ -53,9 +55,9 @@
     },
     "devDependencies": {
         "@types/mocha": "^5.2.7",
-        "@types/node": "^12.11.6",
-        "tslint": "^5.20.0",
-        "typescript": "^3.6.4",
+        "@types/node": "^12.12.14",
+        "tslint": "^5.20.1",
+        "typescript": "^3.7.2",
         "vscode": "^1.1.36"
     },
     "dependencies": {
