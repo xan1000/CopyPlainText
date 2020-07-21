@@ -3,11 +3,16 @@
     "displayName": "CopyPlainText",
     "description": "Copy plain text with no formatting.",
     "icon": "icon.png",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "license": "Apache-2.0",
     "publisher": "p26frqxxfmwrzekd6c6fcty5kipjkr3gaeejzpkyy42p5udjkjyq",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xan1000/CopyPlainText"
+    },
+    "homepage": "https://github.com/xan1000/CopyPlainText",
     "engines": {
-        "vscode": "^1.40.2"
+        "vscode": "^1.47.0"
     },
     "categories": [
         "Other"
@@ -15,7 +20,7 @@
     "activationEvents": [
         "onCommand:extension.copyPlainText"
     ],
-    "main": "./out/extension",
+    "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
@@ -49,23 +54,25 @@
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
+        "lint": "eslint src --ext ts",
         "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/mocha": "^5.2.7",
-        "@types/node": "^12.12.14",
-        "tslint": "^5.20.1",
-        "typescript": "^3.7.2",
-        "vscode": "^1.1.36"
+        "@types/vscode": "^1.47.0",
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.11.0",
+        "eslint": "^6.8.0",
+        "@typescript-eslint/parser": "^2.30.0",
+        "@typescript-eslint/eslint-plugin": "^2.30.0",
+        "glob": "^7.1.6",
+        "mocha": "^7.1.2",
+        "typescript": "^3.8.3",
+        "vscode-test": "^1.3.0"
     },
     "dependencies": {
         "copy-paste": "^1.3.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://bitbucket.org/xan1000/copyplaintext/src/master/"
-    },
-    "homepage": "https://bitbucket.org/xan1000/copyplaintext"
+    }
 }
